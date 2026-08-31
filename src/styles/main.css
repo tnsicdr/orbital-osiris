@@ -1,0 +1,10 @@
+:root {
+  --site-width: 100vw;
+  --site-width: 100dvw;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-width: 768px;
+  }
+}
