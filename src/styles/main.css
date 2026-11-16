@@ -21,6 +21,18 @@ body {
   color: var(--sky-blue-light);
 }
 
+body {
+  font-family:
+    "LINE Seed JP",
+    "Noto Sans JP",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Meiryo",
+    sans-serif;
+}
+
 @media (min-width: 768px) {
   :root {
     --site-width: 768px;

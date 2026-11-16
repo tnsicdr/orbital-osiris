@@ -1,6 +1,9 @@
+import { NavItems } from "../../../shared/content/navItems";
 import styles from "./SideBar.module.css";
 import { ToggleButton } from "./components/ToggleButton/ToggleButton";
 import { useSideBarStore } from "./hooks/useSideBarStore";
+
+const basePath = import.meta.env.BASE_URL;
 
 export function SideBar() {
   const { isOpen } = useSideBarStore();
@@ -15,8 +18,13 @@ export function SideBar() {
       </div>
       <nav>
         <ul>
-          <li>main</li>
-          <li>about</li>
+          {NavItems.map((item) => {
+            return (
+              <li key={`${item.label}-${item.path}`}>
+                <a href={`${basePath}/${item.path}`}>{item.label}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
