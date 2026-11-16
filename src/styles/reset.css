@@ -1,0 +1,159 @@
+/* Reset base margin and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.15; /* Normalize Safari/Chrome line-height inconsistency */
+  text-rendering: optimizeLegibility; /* Better font smoothing */
+  -webkit-font-smoothing: antialiased; /* Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Firefox on macOS */
+}
+
+/* Reset headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset lists */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Reset buttons */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  /* Cross-browser button normalization */
+  -webkit-appearance: none; /* Remove Safari button styling */
+  -moz-appearance: none; /* Remove Firefox button styling */
+  appearance: none; /* Standard property */
+  /* Ensure consistent sizing across browsers */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reset form elements */
+input,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  -webkit-appearance: none; /* Remove Safari input styling */
+  -moz-appearance: none; /* Remove Firefox input styling */
+  appearance: none; /* Standard property */
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset image styles */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset quote styles */
+blockquote {
+  margin: 0;
+}
+
+/* Cross-browser normalization for various elements */
+/* Ensure consistent spacing and alignment across browsers */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  /* Normalize line-height */
+  line-height: inherit;
+  /* Ensure consistent padding in Firefox */
+  -moz-padding-start: 0;
+  -moz-padding-end: 0;
+  /* Remove default focus styles for buttons (can be added back with CSS if needed) */
+  outline: none;
+}
+
+/* Remove default styling from select elements */
+select {
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* Standard */
+  /* Ensure consistent styling */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Remove default styling from input[type="search"] in WebKit browsers */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Ensure consistent padding */
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+}
+
+/* Normalize form field heights across browsers */
+input,
+textarea,
+select {
+  /* Fix height inconsistency in Firefox */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Ensure consistent vertical alignment */
+  vertical-align: middle;
+}
+
+/* Normalize list styles */
+ul,
+ol {
+  /* Reset default margins/padding */
+  margin: 0;
+  padding: 0;
+}
+
+/* Normalize table cell padding */
+td,
+th {
+  padding: 0;
+}
+
+/* Normalize text alignment for various elements */
+button,
+input,
+select,
+textarea {
+  text-align: inherit;
+}

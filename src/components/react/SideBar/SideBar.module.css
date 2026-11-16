@@ -1,0 +1,31 @@
+.sidebar-container {
+  background: var(--yale-blue-2);
+  border-right: 1px solid var(--yale-blue);
+  border-top: 1px solid var(--yale-blue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  transition: width 0.3s ease-in-out;
+  width: 100px;
+
+  &[data-expanded="true"] {
+    width: 500px; /* adjust this based on your design */
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-container {
+    min-width: 192px;
+  }
+}
+
+.toggle {
+  border: 1px solid black;
+  padding: 8px;
+
+  &:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+  }
+}

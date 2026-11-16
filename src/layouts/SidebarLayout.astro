@@ -1,0 +1,47 @@
+---
+import { SideBar } from "../components/react/SideBar/SideBar";
+import "../styles/main.css";
+import "../styles/reset.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#2a6f97ff" />
+    <title>orbital-osiris</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <SideBar client:load />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  main {
+    background: var(--rich-cerulean);
+    padding: 1rem;
+    width: 100%;
+  }
+</style>
