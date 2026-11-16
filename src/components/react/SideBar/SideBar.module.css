@@ -4,28 +4,30 @@
   border-top: 1px solid var(--yale-blue);
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   height: 100%;
   padding: 1rem;
   transition: width 0.3s ease-in-out;
-  width: 100px;
+  width: 64px;
 
   &[data-expanded="true"] {
     width: 500px; /* adjust this based on your design */
   }
 }
 
-@media (min-width: 768px) {
-  .sidebar-container {
-    min-width: 192px;
+.sidebar-controls {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar-header {
+  &[data-visible="false"] {
   }
 }
 
-.toggle {
-  border: 1px solid black;
-  padding: 8px;
-
-  &:focus-visible {
-    outline: 2px solid blue;
-    outline-offset: 2px;
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-container {
+    transition: none;
   }
 }

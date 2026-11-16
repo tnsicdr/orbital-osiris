@@ -1,0 +1,26 @@
+.toggle-button {
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 32px;
+  padding: 8px;
+  width: 32px;
+
+  &:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+  }
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+
+  &[data-expanded="true"] {
+    transform: scaleX(-1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}
