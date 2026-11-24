@@ -1,0 +1,58 @@
+.sidebar-container {
+  background: var(--yale-blue-2);
+  border-right: 1px solid var(--yale-blue);
+  border-top: 1px solid var(--yale-blue);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1rem;
+  transition: width 0.3s ease-in-out;
+  width: 64px;
+
+  &[data-expanded="true"] {
+    width: 500px;
+  }
+}
+
+.sidebar-controls {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  .link-icon {
+    flex-shrink: 0;
+    height: 32px;
+    margin-right: 1rem;
+    width: 32px;
+  }
+}
+
+.sidebar-header {
+  overflow: none;
+  transition: visibility 0.2s ease-in-out;
+  white-space: nowrap;
+
+  &[data-visible="false"] {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-container {
+    transition: none;
+  }
+}

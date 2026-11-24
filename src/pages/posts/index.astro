@@ -1,0 +1,15 @@
+---
+import SidebarLayout from "../../layouts/SidebarLayout.astro";
+import { postsMock } from './_mocks/postsMock.ts';
+---
+<SidebarLayout>
+  <div>
+    <ul>
+      {postsMock.map((post) => {
+        return (<li>
+          <div>{post.title}</div>
+        </li>)
+      })}
+    </ul>
+  </div>
+</SidebarLayout>
